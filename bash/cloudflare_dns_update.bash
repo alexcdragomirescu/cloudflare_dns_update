@@ -1,5 +1,7 @@
 #!/bin/bash
 
+baseDir=`dirname "$0"`
+
 authEmail='someone@example.com'
 authKey='0000000000000000000000000000000000000'
 
@@ -10,7 +12,7 @@ curl='/usr/bin/curl -s'
 date='/bin/date'
 jq='/usr/bin/jq'
 
-logFile='cloudflare_dns_update.log'
+logFile="$baseDir/cloudflare_dns_update.log"
 
 date_time=$($date)
 
